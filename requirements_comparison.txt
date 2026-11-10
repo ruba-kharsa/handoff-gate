@@ -1,0 +1,4 @@
+# Extra comparison: handoff_comparison.py
+# Includes the main MiniLM dependencies plus the TF-IDF dependency.
+-r requirements.txt
+scikit-learn

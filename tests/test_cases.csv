@@ -1,0 +1,107 @@
+message,specialist,expected
+Find cheaper hotels in Dubai,accommodation,REJECT
+Do those hotel rooms include breakfast?,accommodation,REJECT
+I need a place to stay tonight,accommodation,REJECT
+Can I get a room with two beds?,accommodation,REJECT
+Find flights to London,accommodation,ALLOW
+I'm done with hotels. Show flights.,accommodation,ALLOW
+I don't want a hotel; I want a plane ticket,accommodation,ALLOW
+What about the cheaper ones?,accommodation,REJECT
+Tell me more,accommodation,REJECT
+Find hotels and flights together,accommodation,REJECT
+Hi there,accommodation,ALLOW
+Could you locate somewhere to sleep tonight?,accommodation,REJECT
+Is late checkout available at this property?,accommodation,REJECT
+Does the suite include an ensuite bathroom?,accommodation,REJECT
+Is there a refundable rate for that room?,accommodation,REJECT
+Could you compare two places to lodge for a weekend?,accommodation,REJECT
+Is the property pet friendly?,accommodation,REJECT
+Can we get a connecting suite for the children?,accommodation,REJECT
+Does the accommodation have a swimming pool?,accommodation,REJECT
+I need somewhere with a kitchen and laundry.,accommodation,REJECT
+Can I extend my stay by one night?,accommodation,REJECT
+No more hotels. Please find me a flight to Cairo.,accommodation,ALLOW
+I already booked accommodation; what flights leave on Friday?,accommodation,ALLOW
+Forget rooms. Show me museums near the waterfront.,accommodation,ALLOW
+The hotel is settled. Can we plan the full itinerary?,accommodation,ALLOW
+Not a hotel this time; I want plane tickets.,accommodation,ALLOW
+I do not need a room. Tell me about airline baggage.,accommodation,ALLOW
+Do not show flights; I need a hotel with breakfast.,accommodation,REJECT
+"No, not flights. Just show me affordable rooms.",accommodation,REJECT
+I do not need a guided tour; I want a room.,accommodation,REJECT
+Forget the itinerary; I still need a place to stay.,accommodation,REJECT
+Find a hotel close to the airport terminal.,accommodation,REJECT
+Can I get a quiet room near the museum district?,accommodation,REJECT
+Book an airport hotel rather than an airport transfer.,accommodation,REJECT
+Can you get both a hotel and flight for my dates?,accommodation,REJECT
+Book a room and schedule a guided tour.,accommodation,REJECT
+"Yes, that one.",accommodation,REJECT
+Could you make it cheaper?,accommodation,REJECT
+I have a question about my reservation.,accommodation,REJECT
+"Hi, are you still there?",accommodation,REJECT
+Is that included?,accommodation,REJECT
+"I want to fly, not stay overnight.",accommodation,ALLOW
+"I want a staycation, not an airline ticket.",accommodation,REJECT
+The room has a flight-themed mural; is breakfast included?,accommodation,REJECT
+Please find a flight-friendly hotel with flexible check-in.,accommodation,REJECT
+"Find me a flight, not a hotel near the airport.",accommodation,ALLOW
+Which museums can I visit?,activities,REJECT
+Show walking tours,activities,REJECT
+I need a cheap flight,activities,ALLOW
+Are there any art galleries worth visiting?,activities,REJECT
+What can we do outdoors this afternoon?,activities,REJECT
+Book a guided walking experience in the old town.,activities,REJECT
+Can you suggest a family-friendly excursion?,activities,REJECT
+I want to see historic landmarks.,activities,REJECT
+Are there any boat rides or cultural experiences?,activities,REJECT
+No more museums. Show places to stay nearby.,activities,ALLOW
+The tour is booked; now arrange flights.,activities,ALLOW
+I do not want a plane ticket; find me a walking tour.,activities,REJECT
+Tour the old airport museum and nearby galleries.,activities,REJECT
+Find a walking tour that starts at my hotel.,activities,REJECT
+Find an attraction and nearby lodging.,activities,ALLOW
+Can you help me with the details?,activities,REJECT
+Is it open tomorrow?,activities,REJECT
+What is the weather forecast for tomorrow?,activities,ALLOW
+Can we visit the aviation museum on a guided tour?,activities,REJECT
+What is the baggage allowance?,flights,REJECT
+Show flights leaving tomorrow,flights,REJECT
+Can you find a hotel near the airport?,flights,ALLOW
+Which carrier permits an extra checked suitcase?,flights,REJECT
+Are there nonstop departures in the morning?,flights,REJECT
+Can you find a return airfare under 400 dollars?,flights,REJECT
+What is the cancellation fee on my plane ticket?,flights,REJECT
+Can I bring two carry-on bags aboard?,flights,REJECT
+Is a layover needed on this route?,flights,REJECT
+Find the earliest departure to Rome.,flights,REJECT
+Which terminal does my airline depart from?,flights,REJECT
+Please stop searching flights. I need a cheap hotel.,flights,ALLOW
+My ticket is booked; find a guided city tour.,flights,ALLOW
+Ignore the airport for now and plan my vacation schedule.,flights,ALLOW
+Do not suggest hotels; I only need flight times.,flights,REJECT
+No hotels please; check the baggage policy on this flight.,flights,REJECT
+Are flights available to the city with the famous museum?,flights,REJECT
+Which airline flies to the hotel destination I mentioned?,flights,REJECT
+I need flights and a complete itinerary for next month.,flights,REJECT
+What about the other option?,flights,REJECT
+"Thanks, that works.",flights,REJECT
+Find me a travel insurance policy.,flights,ALLOW
+I want to rent a car at the airport.,flights,ALLOW
+Help me build a three-day itinerary,trips,REJECT
+Organize my vacation schedule,trips,REJECT
+Find an apartment to stay in,trips,ALLOW
+Plan the order of stops across my four-day vacation.,trips,REJECT
+Split my week between three cities.,trips,REJECT
+Build a day-by-day schedule for our holiday.,trips,REJECT
+Please rearrange the itinerary so we visit Paris last.,trips,REJECT
+Can you optimize the route for our whole journey?,trips,REJECT
+Organize a five-day getaway with morning and evening plans.,trips,REJECT
+We finished the itinerary. I only need a hotel.,trips,ALLOW
+I do not want an itinerary; I want a room for two.,trips,ALLOW
+Stop the vacation planning and book a museum visit.,trips,ALLOW
+Skip hotel booking; build a day-by-day itinerary.,trips,REJECT
+"Plan a journey linking hotels, museums, and flights over a week.",trips,REJECT
+Make a multi-city itinerary including flights and accommodation.,trips,REJECT
+Does it include everything?,trips,REJECT
+"Actually, change the plan.",trips,REJECT
+Can you translate this sentence into French?,trips,ALLOW

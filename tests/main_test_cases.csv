@@ -1,0 +1,21 @@
+message,specialist,expected
+Would I have to clear security again during the connection in Doha?,accommodation,ALLOW
+Can you arrange a sunrise paddle through the mangroves?,accommodation,ALLOW
+Split twelve days between the northern and southern regions without backtracking.,accommodation,ALLOW
+Is the rental unit on a floor we can reach without stairs?,flights,ALLOW
+Are there evening stargazing sessions led by an astronomer?,flights,ALLOW
+Pace the whole journey so no driving day exceeds four hours.,flights,ALLOW
+Will they let us leave the keys after noon without paying for another night?,activities,ALLOW
+Can passengers in the final row recline their seats?,activities,ALLOW
+Does that furnished unit have a washing machine for guests?,trips,ALLOW
+Could we switch to an earlier departure if the connection feels too tight?,trips,ALLOW
+Does that cottage have blackout curtains and a separate entrance?,accommodation,REJECT
+Can my eight-year-old sit beside me on the lowest available fare?,flights,REJECT
+Is the reef snorkeling session suitable for complete beginners?,activities,REJECT
+Could we schedule a rest day halfway through the route?,trips,REJECT
+Can you use the previous one instead?,accommodation,REJECT
+Which of those would be the safer choice?,flights,REJECT
+Would that still work if it rains?,activities,REJECT
+I need somewhere to sleep and an evening river cruise on the same date.,accommodation,REJECT
+Please pair my arrival with an early-access rental and a city pass.,flights,REJECT
+Coordinate the overnight rail segment and a walking food crawl for arrival day.,trips,REJECT

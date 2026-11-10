@@ -1,0 +1,95 @@
+Test cases: 20
+
+Initialization time (keywords): 0.00 ms
+=== KEYWORDS ===
+PASS | ALLOW  expected=ALLOW  | accommodation | Would I have to clear security again during the connection in Doha?
+PASS | ALLOW  expected=ALLOW  | accommodation | Can you arrange a sunrise paddle through the mangroves?
+PASS | ALLOW  expected=ALLOW  | accommodation | Split twelve days between the northern and southern regions without backtracking.
+PASS | ALLOW  expected=ALLOW  | flights       | Is the rental unit on a floor we can reach without stairs?
+PASS | ALLOW  expected=ALLOW  | flights       | Are there evening stargazing sessions led by an astronomer?
+PASS | ALLOW  expected=ALLOW  | flights       | Pace the whole journey so no driving day exceeds four hours.
+PASS | ALLOW  expected=ALLOW  | activities    | Will they let us leave the keys after noon without paying for another night?
+PASS | ALLOW  expected=ALLOW  | activities    | Can passengers in the final row recline their seats?
+PASS | ALLOW  expected=ALLOW  | trips         | Does that furnished unit have a washing machine for guests?
+PASS | ALLOW  expected=ALLOW  | trips         | Could we switch to an earlier departure if the connection feels too tight?
+FAIL | ALLOW  expected=REJECT | accommodation | Does that cottage have blackout curtains and a separate entrance?
+Scores: {'accommodation': 0, 'flights': 0, 'activities': 0, 'trips': 0}
+FAIL | ALLOW  expected=REJECT | flights       | Can my eight-year-old sit beside me on the lowest available fare?
+Scores: {'accommodation': 0, 'flights': 0, 'activities': 0, 'trips': 0}
+FAIL | ALLOW  expected=REJECT | activities    | Is the reef snorkeling session suitable for complete beginners?
+Scores: {'accommodation': 0, 'flights': 0, 'activities': 0, 'trips': 0}
+PASS | REJECT expected=REJECT | trips         | Could we schedule a rest day halfway through the route?
+FAIL | ALLOW  expected=REJECT | accommodation | Can you use the previous one instead?
+Scores: {'accommodation': 0, 'flights': 0, 'activities': 0, 'trips': 0}
+FAIL | ALLOW  expected=REJECT | flights       | Which of those would be the safer choice?
+Scores: {'accommodation': 0, 'flights': 0, 'activities': 0, 'trips': 0}
+FAIL | ALLOW  expected=REJECT | activities    | Would that still work if it rains?
+Scores: {'accommodation': 0, 'flights': 0, 'activities': 0, 'trips': 0}
+FAIL | ALLOW  expected=REJECT | accommodation | I need somewhere to sleep and an evening river cruise on the same date.
+Scores: {'accommodation': 0, 'flights': 0, 'activities': 0, 'trips': 0}
+PASS | REJECT expected=REJECT | flights       | Please pair my arrival with an early-access rental and a city pass.
+FAIL | ALLOW  expected=REJECT | trips         | Coordinate the overnight rail segment and a walking food crawl for arrival day.
+Scores: {'accommodation': 0, 'flights': 1, 'activities': 0, 'trips': 0}
+Results: 12/20 passed | false REJECT=0 | false ALLOW=8
+Average decision time: 0.39 ms
+
+Initialization time (tfidf): 1279.62 ms
+=== TFIDF ===
+PASS | ALLOW  expected=ALLOW  | accommodation | Would I have to clear security again during the connection in Doha?
+PASS | ALLOW  expected=ALLOW  | accommodation | Can you arrange a sunrise paddle through the mangroves?
+PASS | ALLOW  expected=ALLOW  | accommodation | Split twelve days between the northern and southern regions without backtracking.
+PASS | ALLOW  expected=ALLOW  | flights       | Is the rental unit on a floor we can reach without stairs?
+PASS | ALLOW  expected=ALLOW  | flights       | Are there evening stargazing sessions led by an astronomer?
+PASS | ALLOW  expected=ALLOW  | flights       | Pace the whole journey so no driving day exceeds four hours.
+PASS | ALLOW  expected=ALLOW  | activities    | Will they let us leave the keys after noon without paying for another night?
+PASS | ALLOW  expected=ALLOW  | activities    | Can passengers in the final row recline their seats?
+PASS | ALLOW  expected=ALLOW  | trips         | Does that furnished unit have a washing machine for guests?
+PASS | ALLOW  expected=ALLOW  | trips         | Could we switch to an earlier departure if the connection feels too tight?
+FAIL | ALLOW  expected=REJECT | accommodation | Does that cottage have blackout curtains and a separate entrance?
+Scores: {'accommodation': 0.175, 'flights': 0.178, 'activities': 0.136, 'trips': 0.175}
+FAIL | ALLOW  expected=REJECT | flights       | Can my eight-year-old sit beside me on the lowest available fare?
+Scores: {'accommodation': 0.0, 'flights': 0.0, 'activities': 0.0, 'trips': 0.0}
+FAIL | ALLOW  expected=REJECT | activities    | Is the reef snorkeling session suitable for complete beginners?
+Scores: {'accommodation': 0.302, 'flights': 0.0, 'activities': 0.0, 'trips': 0.253}
+PASS | REJECT expected=REJECT | trips         | Could we schedule a rest day halfway through the route?
+FAIL | ALLOW  expected=REJECT | accommodation | Can you use the previous one instead?
+Scores: {'accommodation': 0.0, 'flights': 0.0, 'activities': 0.0, 'trips': 0.0}
+FAIL | ALLOW  expected=REJECT | flights       | Which of those would be the safer choice?
+Scores: {'accommodation': 0.0, 'flights': 0.0, 'activities': 0.0, 'trips': 0.0}
+FAIL | ALLOW  expected=REJECT | activities    | Would that still work if it rains?
+Scores: {'accommodation': 0.0, 'flights': 0.0, 'activities': 0.0, 'trips': 0.0}
+FAIL | ALLOW  expected=REJECT | accommodation | I need somewhere to sleep and an evening river cruise on the same date.
+Scores: {'accommodation': 0.175, 'flights': 0.178, 'activities': 0.136, 'trips': 0.175}
+PASS | REJECT expected=REJECT | flights       | Please pair my arrival with an early-access rental and a city pass.
+PASS | REJECT expected=REJECT | trips         | Coordinate the overnight rail segment and a walking food crawl for arrival day.
+Results: 13/20 passed | false REJECT=0 | false ALLOW=7
+Average decision time: 4.56 ms
+
+Initialization time (minilm): 454.41 ms
+=== MINILM ===
+PASS | ALLOW  expected=ALLOW  | accommodation | Would I have to clear security again during the connection in Doha?
+PASS | ALLOW  expected=ALLOW  | accommodation | Can you arrange a sunrise paddle through the mangroves?
+PASS | ALLOW  expected=ALLOW  | accommodation | Split twelve days between the northern and southern regions without backtracking.
+PASS | ALLOW  expected=ALLOW  | flights       | Is the rental unit on a floor we can reach without stairs?
+PASS | ALLOW  expected=ALLOW  | flights       | Are there evening stargazing sessions led by an astronomer?
+PASS | ALLOW  expected=ALLOW  | flights       | Pace the whole journey so no driving day exceeds four hours.
+PASS | ALLOW  expected=ALLOW  | activities    | Will they let us leave the keys after noon without paying for another night?
+PASS | ALLOW  expected=ALLOW  | activities    | Can passengers in the final row recline their seats?
+PASS | ALLOW  expected=ALLOW  | trips         | Does that furnished unit have a washing machine for guests?
+PASS | ALLOW  expected=ALLOW  | trips         | Could we switch to an earlier departure if the connection feels too tight?
+PASS | REJECT expected=REJECT | accommodation | Does that cottage have blackout curtains and a separate entrance?
+PASS | REJECT expected=REJECT | flights       | Can my eight-year-old sit beside me on the lowest available fare?
+PASS | REJECT expected=REJECT | activities    | Is the reef snorkeling session suitable for complete beginners?
+PASS | REJECT expected=REJECT | trips         | Could we schedule a rest day halfway through the route?
+FAIL | ALLOW  expected=REJECT | accommodation | Can you use the previous one instead?
+Scores: {'accommodation': 0.05, 'flights': 0.136, 'activities': 0.077, 'trips': 0.035}
+PASS | REJECT expected=REJECT | flights       | Which of those would be the safer choice?
+FAIL | ALLOW  expected=REJECT | activities    | Would that still work if it rains?
+Scores: {'accommodation': 0.112, 'flights': 0.017, 'activities': 0.031, 'trips': 0.054}
+PASS | REJECT expected=REJECT | accommodation | I need somewhere to sleep and an evening river cruise on the same date.
+FAIL | ALLOW  expected=REJECT | flights       | Please pair my arrival with an early-access rental and a city pass.
+Scores: {'accommodation': 0.391, 'flights': 0.209, 'activities': 0.236, 'trips': 0.278}
+PASS | REJECT expected=REJECT | trips         | Coordinate the overnight rail segment and a walking food crawl for arrival day.
+Results: 17/20 passed | false REJECT=0 | false ALLOW=3
+Average decision time: 5.93 ms
+

@@ -1,0 +1,131 @@
+Selected method: MiniLM
+Minimum score: 0.0
+Initialization time: 310.33 ms
+
+PASS | REJECT expected=REJECT | accommodation | Find cheaper hotels in Dubai
+PASS | REJECT expected=REJECT | accommodation | Do those hotel rooms include breakfast?
+PASS | REJECT expected=REJECT | accommodation | I need a place to stay tonight
+PASS | REJECT expected=REJECT | accommodation | Can I get a room with two beds?
+PASS | ALLOW  expected=ALLOW  | accommodation | Find flights to London
+PASS | ALLOW  expected=ALLOW  | accommodation | I'm done with hotels. Show flights.
+PASS | ALLOW  expected=ALLOW  | accommodation | I don't want a hotel; I want a plane ticket
+PASS | REJECT expected=REJECT | accommodation | What about the cheaper ones?
+FAIL | ALLOW  expected=REJECT | accommodation | Tell me more
+Scores: {'accommodation': 0.068, 'flights': 0.124, 'activities': 0.1, 'trips': 0.097}
+FAIL | ALLOW  expected=REJECT | accommodation | Find hotels and flights together
+Scores: {'accommodation': 0.592, 'flights': 0.603, 'activities': 0.367, 'trips': 0.519}
+PASS | ALLOW  expected=ALLOW  | accommodation | Hi there
+PASS | REJECT expected=REJECT | accommodation | Could you locate somewhere to sleep tonight?
+PASS | REJECT expected=REJECT | accommodation | Is late checkout available at this property?
+PASS | REJECT expected=REJECT | accommodation | Does the suite include an ensuite bathroom?
+PASS | REJECT expected=REJECT | accommodation | Is there a refundable rate for that room?
+PASS | REJECT expected=REJECT | accommodation | Could you compare two places to lodge for a weekend?
+FAIL | ALLOW  expected=REJECT | accommodation | Is the property pet friendly?
+Scores: {'accommodation': 0.229, 'flights': 0.028, 'activities': 0.236, 'trips': 0.014}
+PASS | REJECT expected=REJECT | accommodation | Can we get a connecting suite for the children?
+PASS | REJECT expected=REJECT | accommodation | Does the accommodation have a swimming pool?
+PASS | REJECT expected=REJECT | accommodation | I need somewhere with a kitchen and laundry.
+PASS | REJECT expected=REJECT | accommodation | Can I extend my stay by one night?
+PASS | ALLOW  expected=ALLOW  | accommodation | No more hotels. Please find me a flight to Cairo.
+PASS | ALLOW  expected=ALLOW  | accommodation | I already booked accommodation; what flights leave on Friday?
+PASS | ALLOW  expected=ALLOW  | accommodation | Forget rooms. Show me museums near the waterfront.
+PASS | ALLOW  expected=ALLOW  | accommodation | The hotel is settled. Can we plan the full itinerary?
+PASS | ALLOW  expected=ALLOW  | accommodation | Not a hotel this time; I want plane tickets.
+PASS | ALLOW  expected=ALLOW  | accommodation | I do not need a room. Tell me about airline baggage.
+PASS | REJECT expected=REJECT | accommodation | Do not show flights; I need a hotel with breakfast.
+FAIL | ALLOW  expected=REJECT | accommodation | No, not flights. Just show me affordable rooms.
+Scores: {'accommodation': 0.5, 'flights': 0.647, 'activities': 0.312, 'trips': 0.369}
+FAIL | ALLOW  expected=REJECT | accommodation | I do not need a guided tour; I want a room.
+Scores: {'accommodation': 0.452, 'flights': 0.137, 'activities': 0.66, 'trips': 0.322}
+FAIL | ALLOW  expected=REJECT | accommodation | Forget the itinerary; I still need a place to stay.
+Scores: {'accommodation': 0.488, 'flights': 0.21, 'activities': 0.334, 'trips': 0.519}
+PASS | REJECT expected=REJECT | accommodation | Find a hotel close to the airport terminal.
+FAIL | ALLOW  expected=REJECT | accommodation | Can I get a quiet room near the museum district?
+Scores: {'accommodation': 0.347, 'flights': 0.076, 'activities': 0.51, 'trips': 0.073}
+PASS | REJECT expected=REJECT | accommodation | Book an airport hotel rather than an airport transfer.
+FAIL | ALLOW  expected=REJECT | accommodation | Can you get both a hotel and flight for my dates?
+Scores: {'accommodation': 0.528, 'flights': 0.595, 'activities': 0.314, 'trips': 0.502}
+FAIL | ALLOW  expected=REJECT | accommodation | Book a room and schedule a guided tour.
+Scores: {'accommodation': 0.403, 'flights': 0.182, 'activities': 0.612, 'trips': 0.347}
+PASS | REJECT expected=REJECT | accommodation | Yes, that one.
+PASS | REJECT expected=REJECT | accommodation | Could you make it cheaper?
+PASS | REJECT expected=REJECT | accommodation | I have a question about my reservation.
+FAIL | ALLOW  expected=REJECT | accommodation | Hi, are you still there?
+Scores: {'accommodation': 0.126, 'flights': 0.138, 'activities': 0.071, 'trips': 0.096}
+PASS | REJECT expected=REJECT | accommodation | Is that included?
+PASS | ALLOW  expected=ALLOW  | accommodation | I want to fly, not stay overnight.
+FAIL | ALLOW  expected=REJECT | accommodation | I want a staycation, not an airline ticket.
+Scores: {'accommodation': 0.401, 'flights': 0.508, 'activities': 0.269, 'trips': 0.381}
+PASS | REJECT expected=REJECT | accommodation | The room has a flight-themed mural; is breakfast included?
+PASS | REJECT expected=REJECT | accommodation | Please find a flight-friendly hotel with flexible check-in.
+FAIL | REJECT expected=ALLOW  | accommodation | Find me a flight, not a hotel near the airport.
+Scores: {'accommodation': 0.451, 'flights': 0.412, 'activities': 0.258, 'trips': 0.331}
+PASS | REJECT expected=REJECT | activities    | Which museums can I visit?
+PASS | REJECT expected=REJECT | activities    | Show walking tours
+PASS | ALLOW  expected=ALLOW  | activities    | I need a cheap flight
+PASS | REJECT expected=REJECT | activities    | Are there any art galleries worth visiting?
+FAIL | ALLOW  expected=REJECT | activities    | What can we do outdoors this afternoon?
+Scores: {'accommodation': 0.326, 'flights': 0.054, 'activities': 0.214, 'trips': 0.182}
+PASS | REJECT expected=REJECT | activities    | Book a guided walking experience in the old town.
+PASS | REJECT expected=REJECT | activities    | Can you suggest a family-friendly excursion?
+PASS | REJECT expected=REJECT | activities    | I want to see historic landmarks.
+PASS | REJECT expected=REJECT | activities    | Are there any boat rides or cultural experiences?
+FAIL | REJECT expected=ALLOW  | activities    | No more museums. Show places to stay nearby.
+Scores: {'accommodation': 0.299, 'flights': 0.085, 'activities': 0.678, 'trips': 0.208}
+PASS | ALLOW  expected=ALLOW  | activities    | The tour is booked; now arrange flights.
+PASS | REJECT expected=REJECT | activities    | I do not want a plane ticket; find me a walking tour.
+PASS | REJECT expected=REJECT | activities    | Tour the old airport museum and nearby galleries.
+PASS | REJECT expected=REJECT | activities    | Find a walking tour that starts at my hotel.
+PASS | ALLOW  expected=ALLOW  | activities    | Find an attraction and nearby lodging.
+PASS | REJECT expected=REJECT | activities    | Can you help me with the details?
+FAIL | ALLOW  expected=REJECT | activities    | Is it open tomorrow?
+Scores: {'accommodation': 0.292, 'flights': 0.111, 'activities': 0.187, 'trips': 0.211}
+PASS | ALLOW  expected=ALLOW  | activities    | What is the weather forecast for tomorrow?
+PASS | REJECT expected=REJECT | activities    | Can we visit the aviation museum on a guided tour?
+PASS | REJECT expected=REJECT | flights       | What is the baggage allowance?
+PASS | REJECT expected=REJECT | flights       | Show flights leaving tomorrow
+PASS | ALLOW  expected=ALLOW  | flights       | Can you find a hotel near the airport?
+PASS | REJECT expected=REJECT | flights       | Which carrier permits an extra checked suitcase?
+PASS | REJECT expected=REJECT | flights       | Are there nonstop departures in the morning?
+PASS | REJECT expected=REJECT | flights       | Can you find a return airfare under 400 dollars?
+PASS | REJECT expected=REJECT | flights       | What is the cancellation fee on my plane ticket?
+PASS | REJECT expected=REJECT | flights       | Can I bring two carry-on bags aboard?
+PASS | REJECT expected=REJECT | flights       | Is a layover needed on this route?
+PASS | REJECT expected=REJECT | flights       | Find the earliest departure to Rome.
+PASS | REJECT expected=REJECT | flights       | Which terminal does my airline depart from?
+PASS | ALLOW  expected=ALLOW  | flights       | Please stop searching flights. I need a cheap hotel.
+PASS | ALLOW  expected=ALLOW  | flights       | My ticket is booked; find a guided city tour.
+PASS | ALLOW  expected=ALLOW  | flights       | Ignore the airport for now and plan my vacation schedule.
+FAIL | ALLOW  expected=REJECT | flights       | Do not suggest hotels; I only need flight times.
+Scores: {'accommodation': 0.571, 'flights': 0.416, 'activities': 0.363, 'trips': 0.505}
+PASS | REJECT expected=REJECT | flights       | No hotels please; check the baggage policy on this flight.
+FAIL | ALLOW  expected=REJECT | flights       | Are flights available to the city with the famous museum?
+Scores: {'accommodation': 0.235, 'flights': 0.452, 'activities': 0.685, 'trips': 0.34}
+PASS | REJECT expected=REJECT | flights       | Which airline flies to the hotel destination I mentioned?
+PASS | REJECT expected=REJECT | flights       | I need flights and a complete itinerary for next month.
+PASS | REJECT expected=REJECT | flights       | What about the other option?
+PASS | REJECT expected=REJECT | flights       | Thanks, that works.
+PASS | ALLOW  expected=ALLOW  | flights       | Find me a travel insurance policy.
+PASS | ALLOW  expected=ALLOW  | flights       | I want to rent a car at the airport.
+PASS | REJECT expected=REJECT | trips         | Help me build a three-day itinerary
+PASS | REJECT expected=REJECT | trips         | Organize my vacation schedule
+PASS | ALLOW  expected=ALLOW  | trips         | Find an apartment to stay in
+PASS | REJECT expected=REJECT | trips         | Plan the order of stops across my four-day vacation.
+PASS | REJECT expected=REJECT | trips         | Split my week between three cities.
+PASS | REJECT expected=REJECT | trips         | Build a day-by-day schedule for our holiday.
+PASS | REJECT expected=REJECT | trips         | Please rearrange the itinerary so we visit Paris last.
+PASS | REJECT expected=REJECT | trips         | Can you optimize the route for our whole journey?
+PASS | REJECT expected=REJECT | trips         | Organize a five-day getaway with morning and evening plans.
+PASS | ALLOW  expected=ALLOW  | trips         | We finished the itinerary. I only need a hotel.
+PASS | ALLOW  expected=ALLOW  | trips         | I do not want an itinerary; I want a room for two.
+PASS | ALLOW  expected=ALLOW  | trips         | Stop the vacation planning and book a museum visit.
+PASS | REJECT expected=REJECT | trips         | Skip hotel booking; build a day-by-day itinerary.
+PASS | REJECT expected=REJECT | trips         | Plan a journey linking hotels, museums, and flights over a week.
+PASS | REJECT expected=REJECT | trips         | Make a multi-city itinerary including flights and accommodation.
+FAIL | ALLOW  expected=REJECT | trips         | Does it include everything?
+Scores: {'accommodation': 0.147, 'flights': 0.234, 'activities': 0.153, 'trips': 0.184}
+PASS | REJECT expected=REJECT | trips         | Actually, change the plan.
+PASS | ALLOW  expected=ALLOW  | trips         | Can you translate this sentence into French?
+
+Results: 88/106 passed | false REJECT=2 | false ALLOW=16
+Average decision time: 5.24 ms
