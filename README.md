@@ -11,28 +11,19 @@ The existing orchestrator already has a router that can select the same speciali
 
 The prototype uses only the **latest user message** and **active specialist**, not the specialist-generated handoff reason or previous messages. Unclear cases go to the router, assuming it receives enough conversation context to decide reliably. This is an English-only, offline demonstration rather than a production integration. The **default minimum similarity score is 0**.
 
-## 1. Main submission (selected fix)
+## Installation and Setup
 
-**`handoff_gate_selected.py` is the main submission.** It uses a small pretrained **MiniLM ONNX** sentence-embedding model through LightEmbed, with NumPy for cosine similarity. Model weights must already be available locally. There is **no live LLM, API key, network request, or model download in the script**. 
-https://huggingface.co/onnx-models/all-MiniLM-L6-v2-onnx
+### 1. Clone the Repository
 
-The model is only 91 MB and is ok for this quick fix.
-### Files required for the main submission
+Clone the project from GitHub and navigate to its directory:
 
-| File | Purpose |
-| --- | --- |
-| `handoff_gate_selected.py` | Selected gate, test runner, CLI, and timing |
-| `test_cases.csv` | Shared expected decisions (106 examples) |
-| `requirements.txt` | Main Python dependencies |
-| `minilm_onnx/` (supplied locally) | ONNX model and tokenizer/config files; included in the ZIP |
-
-**Dependencies:** Python 3.11+, `light-embed`, and `numpy`. LightEmbed uses ONNX Runtime; PyTorch is **not** needed for this script. Install with:
-
-## Setting Up a Virtual Environment (Recommended)
+```bash
+git clone https://github.com/ruba-kharsa/handoff-gate.git
+cd handoff-gate
+```
+### 2. Create a Virtual Environment (recommended)
 
 It is recommended to create a Python virtual environment before installing the project dependencies. This keeps the required packages isolated from your system Python installation and avoids conflicts with other projects.
-
-### 1. Create a Virtual Environment
 
 Open a terminal in the project directory and run:
 
@@ -72,12 +63,26 @@ With the virtual environment activated, install the required packages:
 pip install -r requirements.txt
 ```
 
-### 4. Deactivate When Finished
+### 4. Deactivate When Finished running the scripts
 
 ```bash
 deactivate
 ```
 
+## Main submission (selected fix)
+
+**`handoff_gate_selected.py` is the main submission.** It uses a small pretrained **MiniLM ONNX** sentence-embedding model through LightEmbed, with NumPy for cosine similarity. Model weights must already be available locally. There is **no live LLM, API key, network request, or model download in the script**. 
+https://huggingface.co/onnx-models/all-MiniLM-L6-v2-onnx
+
+The model is only 91 MB and is ok for this quick fix.
+### Files required for the main submission
+
+| File | Purpose |
+| --- | --- |
+| `handoff_gate_selected.py` | Selected gate, test runner, CLI, and timing |
+| `test_cases.csv` | Shared expected decisions (106 examples) |
+| `requirements.txt` | Main Python dependencies |
+| `minilm_onnx/` (supplied locally) | ONNX model and tokenizer/config files; included in the ZIP |
 
 **Run the main submission:**
 
@@ -87,9 +92,9 @@ python handoff_gate_selected.py --test --min-score 0.2
 python handoff_gate_selected.py --message "Find cheaper rooms" --specialist accommodation 
 ```
 
-The script prints case-level PASS/FAIL results, false REJECT/ALLOW counts, **initialization time**, and **average decision time**. It saves the same output to `results_selected.txt` (override with `--output path/to/file.txt`). These files are created when you run the tests; measured results are not prefilled.
+The script prints case-level PASS/FAIL results, false REJECT/ALLOW counts, **initialization time**, and **average decision time**. It saves the same output to `results/results_selected.txt` (override with `--output path/to/file.txt`). These files are created when you run the tests; measured results are not prefilled.
 
-## 2. Extra submission (comparison only)
+## Extra submission (comparison)
 
 **`handoff_comparison.py` is optional supporting work, not the selected handoff fix.** It compares three *independent* approaches against the same CSV:
 
@@ -124,20 +129,19 @@ python handoff_comparison.py --test --method tfidf
 python handoff_comparison.py --test --method minilm 
 ```
 
-Outputs are printed and saved to `results_comparison.txt` by default. Both scripts support `--tests-csv` and `--output`. The **comparison results and rationale for choosing MiniLM are discussed in the Design Notes**; the extra script is included only so reviewers can reproduce the comparison.
+Outputs are printed and saved to `results/results_comparison.txt` by default. Both scripts support `--tests-csv` and `--output`. The **comparison results and rationale for choosing MiniLM are discussed in the Design Notes**; the extra script is included only so reviewers can reproduce the comparison.
 
 A local **Ollama LLM validator was explored but excluded** from the submitted comparison: it was too resource-intensive to run the full challenge suite on the available 8 GB computer, and the task specifically asks for no live model.
 
 ## Test data and interpretation
 
-- `test_cases_original.csv` — 20 initial examples
-- `test_cases_challenge.csv` — 86 more difficult examples (mixed domains, synonyms, negation, and ambiguous phrasing)
-- `test_cases.csv` — all 106 examples together (default input)
+- `main_test_cases.csv` — 20 difficult examples
+- `test_cases.csv` — 106 examples (default input)
 
 You can use any of these CSVs with `--tests-csv`, for example:
 
 ```bash
-python handoff_gate_selected.py --test --tests-csv test_cases_challenge.csv
+python handoff_gate_selected.py --test --tests-csv test_cases_custom.csv
 ```
 
-The expected labels are illustrative and some ambiguous cases require review. Similarity scores are **not probabilities**; the `0` threshold is experimental it can be increased. The script times decisions on the test cases (not an isolated benchmark).
+Similarity scores are **not probabilities**; the `0` threshold is experimental and can be increased. The script times decisions on the test cases (not an isolated benchmark).
