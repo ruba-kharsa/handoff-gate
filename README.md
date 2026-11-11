@@ -141,7 +141,7 @@ A local **Ollama LLM validator was explored but excluded** from the submitted co
 You can use any of these CSVs with `--tests-csv`, for example:
 
 ```bash
-python handoff_gate_selected.py --test --tests-csv test_cases_custom.csv
+python handoff_gate_selected.py --test --tests-csv tests/main_test_cases.csv
 ```
 
 Similarity scores are **not probabilities**; the `0` threshold is experimental and can be increased. The script times decisions on the test cases (not an isolated benchmark).
