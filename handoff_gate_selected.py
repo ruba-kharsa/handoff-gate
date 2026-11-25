@@ -70,6 +70,10 @@ class MiniLMGate:
         self.references = np.asarray(
             self.model.encode([phrase for _, phrase in self.rows])
         )
+        #calculate the norm of reference examples in the init instead of calculating it in every decide method
+        self.references = self.references / (
+        np.linalg.norm(self.references, axis=1, keepdims=True) + 1e-12
+        )
 
     def decide(self, message, active_specialist):
         if active_specialist not in EXAMPLES:
@@ -77,12 +81,11 @@ class MiniLMGate:
 
         # Encode only the latest user message; the handoff reason is intentionally ignored.
         vector = np.asarray(self.model.encode([message]))[0]
-
-        # Cosine similarity between the message and each reference phrase.
-        similarities = (self.references @ vector) / (
-            np.linalg.norm(self.references, axis=1)
-            * np.linalg.norm(vector) + 1e-12
-        )
+        #normalize the message embeddings
+        vector = vector / (np.linalg.norm(vector) + 1e-12)
+        # Cosine similarity between the normalized message and each reference phrase.
+        # The Dot between the normalized examples embeddings and the normalized message embeddings 
+        similarities = self.references @ vector
         # Keep the strongest matching reference phrase for each specialist.
         scores = {
             domain: max(float(similarities[i]) for i, (label, _) in enumerate(self.rows)
