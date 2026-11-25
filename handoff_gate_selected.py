@@ -54,8 +54,6 @@ def decide_from_scores(scores, active_specialist, min_score):
 class MiniLMGate:
     def __init__(self, model_dir, min_score=0):
         
-        # Load optional model dependencies only when MiniLM is selected.
-        self.np = np
         self.min_score = min_score
         # Remember which specialist owns each reference phrase.
         self.rows = [(domain, phrase) for domain, phrases in EXAMPLES.items()
@@ -76,7 +74,7 @@ class MiniLMGate:
     def decide(self, message, active_specialist):
         if active_specialist not in EXAMPLES:
             raise ValueError(f"Unknown specialist: {active_specialist}")
-        np = self.np
+
         # Encode only the latest user message; the handoff reason is intentionally ignored.
         vector = np.asarray(self.model.encode([message]))[0]
 
